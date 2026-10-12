@@ -23,12 +23,12 @@
 // The single source of truth for anything identifying you. Every other
 // section below derives from these fields instead of repeating them.
 export const ME = {
-  firstName:  'Your',
-  lastName:   'Name',
+  firstName:  'Sanvi',
+  lastName:   'Krishnan',
   role:       'Software Engineer', // e.g. "Software Engineer", "Data Scientist"
-  email:      'you@example.com',
-  github:     'yourusername',      // GitHub username only, no URL
-  linkedin:   'yourusername',      // LinkedIn username only, no URL
+  email:      'sanvikrishnan@ucla.edu',
+  github:     'sanvikr',      // GitHub username only, no URL
+  linkedin:   'sanvi-krishnan-3045432a3',      // LinkedIn username only, no URL
   resumePath: '/resume.pdf',       // path under public/ — see README.md
 };
 
@@ -105,17 +105,12 @@ export interface EducationEntry {
 export const EDUCATION: EducationEntry[] = [
   {
     school:     'University of California, Los Angeles',
-    degree:     'B.S. Computer Science',
-    minor:      'Statistics',
-    gpa:        '3.82',
-    graduation: 'June 2026',
+    degree:     'B.S. Physics and Math of Computation',
+    minor:      '',
+    gpa:        '',
+    graduation: 'June 2030',
     courses: [
-      'Data Structures & Algorithms',
-      'Operating Systems',
-      'Computer Networks',
-      'Machine Learning',
-      'Probability & Statistics',
-      'Software Engineering',
+      '',
     ],
   },
 ];
@@ -136,30 +131,30 @@ export interface ExperienceEntry {
 
 export const EXPERIENCE: ExperienceEntry[] = [
   {
-    company:  'Acme Corporation',
-    role:     'Software Engineer Intern',
-    location: 'San Francisco, CA',
+    company:  'UC Santa Barbara',
+    role:     'Student Researcher',
+    location: 'Santa Barbara, CA',
     start:    'Jun 2025',
-    end:      'Aug 2025',
+    end:      'July 2025',
     bullets: [
-      'Built a real-time dashboard in React and TypeScript, reducing incident response time by 40%.',
-      'Designed and deployed three REST API endpoints serving 50k requests per day.',
-      'Collaborated with the design team to ship a redesigned onboarding flow that improved conversion by 18%.',
-    ],
-    tech: ['React', 'TypeScript', 'Python', 'PostgreSQL', 'AWS'],
+      'Collaborated w/2 peers to innovate & implement hybrid CNN–QCNN architecture using classical feature-map compression to reduce qubit inputs while maintaining accuracy for quantum image classification tasks',
+      'Led algorithm development where prior work was limited',
+      'Presented 12-pg paper in Capstone Seminar with 300+ attendees incl. PhD students & professors'
+    ]
+    tech: ['Pennylane', 'Python', 'Quiskit']
   },
   {
-    company:  'UCLA Engineering',
-    role:     'Teaching Assistant — CS 33',
-    location: 'Los Angeles, CA',
-    start:    'Sep 2024',
-    end:      'Dec 2024',
+    company:  '',
+    role:     'Independent ML Researcher',
+    location: 'Sunnyvale, CA',
+    start:    'Sept 2023',
+    end:      'July 2024',
     bullets: [
-      'Led weekly discussion sections for 40 students covering systems programming in C.',
-      'Held office hours to assist students with debugging and conceptual questions.',
-      'Wrote and graded three programming assignments and two midterms.',
-    ],
-    tech: ['C', 'x86 Assembly', 'Linux'],
+      'Benchmarked VGG-16 model against neuroradiologists for brain tumor diagnosis, achieving 13.98% higher accuracy than neuroradiologist classification',
+      'Implemented data augmentation techniques to expand data-253 to 400 samples, enhancing model robustness',
+      'Published 8-pg paper in Curieux Academic Journal'
+    ]
+    tech: ['TensorFlow', 'Python', 'Pytorch']
   },
 ];
 
@@ -179,33 +174,9 @@ export interface ProjectEntry {
 
 export const PROJECTS: ProjectEntry[] = [
   {
-    name:        'StudySync',
-    description: 'A collaborative study-planning app that lets UCLA students share notes, schedule group sessions, and track progress together in real time.',
+    name:        'Raga Detector',
+    description: "An app for all ages where users can send in a sample of a Indian Classical song/phrase to identify its' raga."
     tech:        ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
-    github:      `${GITHUB_URL}/studysync`,
-    live:        'https://studysync.app',
-    featured:    true,
-  },
-  {
-    name:        'BruinBot',
-    description: 'A Discord bot that surfaces real-time UCLA dining menu data, library room availability, and bus schedules for 2,000+ active users.',
-    tech:        ['Node.js', 'Discord.js', 'REST APIs', 'Cron'],
-    github:      `${GITHUB_URL}/bruinbot`,
-    featured:    true,
-  },
-  {
-    name:        'PocketPortfolio',
-    description: 'A mobile-first stock portfolio tracker with custom alerts and a clean chart-based UI, built during a 24-hour hackathon.',
-    tech:        ['React Native', 'Expo', 'Recharts', 'Firebase'],
-    github:      `${GITHUB_URL}/pocketportfolio`,
-    live:        'https://pocketportfolio.dev',
-    featured:    false,
-  },
-  {
-    name:        'AutoGrade',
-    description: 'A command-line grading tool that runs student Python submissions against test suites in isolated Docker containers and produces structured reports.',
-    tech:        ['Python', 'Docker', 'Bash', 'SQLite'],
-    github:      `${GITHUB_URL}/autograde`,
     featured:    false,
   },
 ];
@@ -214,7 +185,6 @@ export const PROJECTS: ProjectEntry[] = [
 // Shown in the header/hero area. Add or remove entries as needed.
 export const SOCIAL_LINKS = [
   { label: 'GitHub',   href: GITHUB_URL   },
-  { label: 'LinkedIn', href: LINKEDIN_URL },
   { label: 'Email',    href: EMAIL_HREF   },
 ];
 
@@ -229,7 +199,6 @@ export const CONTACT = {
     { label: 'Email',    href: EMAIL_HREF,     display: ME.email                         },
     { label: 'GitHub',   href: GITHUB_URL,     display: `github.com/${ME.github}`        },
     { label: 'LinkedIn', href: LINKEDIN_URL,   display: `linkedin.com/in/${ME.linkedin}` },
-    { label: 'Resume',   href: ME.resumePath,  display: 'Download PDF'                   },
   ],
 };
 
@@ -237,7 +206,7 @@ export const CONTACT = {
 // `columns` renders as link groups. The Resume link here reuses
 // ME.resumePath, so it stays in sync with CONTACT automatically.
 export const FOOTER = {
-  tagline: "UCLA Computer Science student building things for the web.",
+  tagline: "UCLA student building things for the web.",
   columns: [
     {
       heading: 'Portfolio',
